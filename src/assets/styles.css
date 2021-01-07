@@ -1,0 +1,46 @@
+:root {
+  --background:hsl(150, 59%, 89%);
+  --base-txt: hsl(0, 0%, 27%);
+  --button-bkgd: hsl(169, 46%, 51%);
+  --error:  hsl(0, 85%, 50%);
+  --box-shadow: hsla(0, 0%, 18%, 0.1);
+  --white: white;
+  --border-radius: 1rem;
+  --base-font-size: 1.25rem;
+  --button-padding: .75rem 1rem;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--base-txt);
+  font-size: var(--base-font-size);
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 90vw;
+  max-width: 50rem;
+  margin: 2rem auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 3px 4px var(--box-shadow);
+  background: var(--white);
+}
+.error {
+  color: var(--error);
+  font-size: var(--base-font-size);
+}
+button {
+  text-decoration: none;
+  background: var(--button-bkgd);
+  color:var(--white);
+  font-weight: bold;
+  border: 0;
+  border-radius: var(--border-radius);
+  padding: var(--button-padding);
+}
