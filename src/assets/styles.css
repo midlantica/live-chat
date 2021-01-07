@@ -1,13 +1,16 @@
 :root {
   --background:hsl(150, 59%, 89%);
-  --base-txt: hsl(0, 0%, 27%);
   --button-bkgd: hsl(169, 46%, 51%);
+  --button-bkgd-dk: hsl(169, 74%, 35%);
+  --base-txt: hsl(0, 0%, 47%);
+  --brand: hsl(169, 35%, 44%);
   --error:  hsl(0, 85%, 50%);
   --box-shadow: hsla(0, 0%, 18%, 0.1);
   --white: white;
-  --border-radius: 1rem;
-  --base-font-size: 1.25rem;
+  --border-radius: 2rem;
+  --base-font-size: 1rem;
   --button-padding: .75rem 1rem;
+  --input-borders: 1px solid hsl(0, 0%, 85%);
 }
 
 #app {
@@ -16,18 +19,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  padding: 0;
+  margin: 0;
   background: var(--background);
   color: var(--base-txt);
   font-size: var(--base-font-size);
-  padding: 0;
-  margin: 0;
 }
 .container {
   width: 90vw;
   max-width: 50rem;
   margin: 2rem auto;
-  border-radius: var(--border-radius);
+  border-radius: 1rem;
   box-shadow: 0px 3px 4px var(--box-shadow);
   background: var(--white);
 }
@@ -43,4 +50,25 @@ button {
   border: 0;
   border-radius: var(--border-radius);
   padding: var(--button-padding);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-bkgd-dk);
+}
+
+button:focus {
+  /* border: none; */
+  outline: none
+}
+
+.pseudo-btn {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pseudo-btn:hover {
+  color:  hsl(110, 100%, 31%);
 }
