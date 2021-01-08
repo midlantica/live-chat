@@ -1,6 +1,8 @@
 <template>
   <Navbar />
-  <h3>Chat room</h3>
+  <div class="chat-wrapper">
+    <h3>Chat room</h3>
+  </div>
 
 </template>
 
@@ -13,5 +15,7 @@
 </script>
 
 <style>
-
+  .chat-wrapper {
+    padding: 1rem 2rem;
+  }
 </style>
