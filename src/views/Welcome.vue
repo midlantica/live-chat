@@ -24,7 +24,6 @@
     setup() {
       const showLogin = ref(true)
 
-
       return { showLogin }
     }
 

@@ -3,6 +3,7 @@
     <input type="text" required placeholder="display name" v-model="displayName">
     <input type="email" required placeholder="email" autocomplete="username" v-model="email">
     <input type="password" reauired placeholder="password" autocomplete="current-password" v-model="password">
+    <div class="error">{{ error }}</div>
     <button>Sign up</button>
   </form>
 </template>
@@ -22,10 +23,10 @@
 
       const handleSubmit = async () => {
         await signUp(email.value, password.value, displayName.value)
-        console.log("User signed up!!!!!!! Yeehaw!");
+        //console.log("User signed up! Yeehaw!");
       }
 
-      return { displayName, email, password, handleSubmit }
+      return { displayName, email, password, handleSubmit, error }
     }
   }
 </script>
