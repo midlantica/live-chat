@@ -13,7 +13,7 @@
   import useSignup from '../composables/useSignup.js'
 
   export default {
-    setup() {
+    setup(props, context) {
       const { error, signUp } = useSignup()
 
       // refs
@@ -24,6 +24,10 @@
       const handleSubmit = async () => {
         await signUp(email.value, password.value, displayName.value)
         //console.log("User signed up! Yeehaw!");
+        if (!error.value) {
+          context.emit('signup')
+          //console.log('User logged in! Woohoo!');
+        }
       }
 
       return { displayName, email, password, handleSubmit, error }
