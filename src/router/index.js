@@ -8,8 +8,9 @@ const requireAuth = (to, from, next) => {
   console.log('current user in auth guard ', user)
   if (!user) {
     next({ name: 'Welcome' })
+  } else {
+    next()
   }
-  next()
 }
 
 const routes = [
