@@ -2,8 +2,8 @@
   <form>
     <textarea
       name=""
-      cols="30"
-      rows="10"
+      cols="40"
+      rows="5"
       placeholder="Type a message and hit enter to send..."
       v-model="message"
       @keypress.enter.prevent="handleSubmit"
@@ -35,6 +35,25 @@
   }
 </script>
 
-<style>
+<style scoped>
+  textarea {
+    border: var(--input-borders);
+    border-radius: .15rem .15rem .15rem .5rem ;
+    padding: .5rem;
+    font-family: sans-serif;
+    font-weight: light;
+    color: var(--brand);
+  }
+
+  textarea::placeholder {
+    color: rgb(184, 184, 184);
+  }
+
+  textarea:focus {
+    border: 1px hsl(0, 0%, 85%) solid;
+    outline: none;
+    background: rgb(252, 255, 220);
+  }
+
 
 </style>

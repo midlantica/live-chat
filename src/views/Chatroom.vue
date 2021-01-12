@@ -32,6 +32,6 @@
 
 <style>
   .chat-wrapper {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 2rem;
   }
 </style>

@@ -45,7 +45,7 @@ body {
 button {
   text-decoration: none;
   background: var(--button-bkgd);
-  color:var(--white);
+  color: var(--white);
   font-weight: bold;
   border: 0;
   border-radius: var(--border-radius);
