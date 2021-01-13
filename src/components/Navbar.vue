@@ -1,7 +1,7 @@
 <template>
   <nav v-if="user">
     <div>
-      <p>Hello {{ user.displayName }}</p>
+      <h2>Hello {{ user.displayName }}</h2>
       <p class="email">Email: {{ user.email }}</p>
     </div>
     <button @click="handleClick">Logout</button>
@@ -37,6 +37,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  nav h2 {
+    font-weight: 100;
+    line-height: 0rem;
+    text-transform: capitalize;
   }
   nav p {
     margin: 2px auto;
