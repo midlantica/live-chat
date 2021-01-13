@@ -48,7 +48,7 @@
     line-height: 1rem;
   }
   .chat-window {
-    background: #fafafa;
+    /* background: #fafafa; */
     padding: 1rem 0;
   }
   .single {
@@ -66,7 +66,7 @@
     font-size: 1rem;
   }
   .messages {
-    max-height: 200px;
+    max-height: 400px;
     overflow: auto;
     font-size: 1rem;
   }

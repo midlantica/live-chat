@@ -2,8 +2,6 @@
   <form>
     <textarea
       name=""
-      cols="40"
-      rows="5"
       placeholder="Type a message and hit enter to send..."
       v-model="message"
       @keypress.enter.prevent="handleSubmit"
@@ -51,6 +49,7 @@
     font-family: inherit;
     font-weight: light;
     color: var(--brand);
+    width: 100%;
   }
 
   textarea::placeholder {

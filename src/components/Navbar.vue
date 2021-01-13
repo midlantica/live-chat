@@ -2,7 +2,8 @@
   <nav v-if="user">
     <div>
       <h2>Hello {{ user.displayName }}</h2>
-      <p class="email">Email: {{ user.email }}</p>
+      <!-- <p class="email"><a href="mailto:{{user.email}}" target="_blank">{{ user.email }}</a></p> -->
+      <p class="email"><a :href="'mailto:' + user.email" target="_BLANK">{{user.email}}</a></p>
     </div>
     <button @click="handleClick">Logout</button>
   </nav>
@@ -51,5 +52,13 @@
   nav p.email {
     font-size: var(--base-font-size);
     color: var(--base-text-color);
+  }
+  nav p.email a {
+    text-decoration: none;
+    color: var(--base-text-color);
+  }
+  nav p.email a:hover {
+    color: var(--brand);
+    background: rgb(255, 255, 123);
   }
 </style>
